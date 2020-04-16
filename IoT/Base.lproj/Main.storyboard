@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IoT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-Ic-Jf8">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YWg-Hg-wwm"/>
+                                    <constraint firstAttribute="height" constant="200" id="bAd-NY-QgL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                <state key="normal" title="Выключить">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signalingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O71-OM-Viu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус сигнализации:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-Ad-jH2">
+                                <rect key="frame" x="81" y="113" width="252" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сигнализация выключена" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bf-xO-lwa">
+                                <rect key="frame" x="81" y="184" width="252" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kAw-Ic-Jf8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0JS-Qw-KKQ"/>
+                            <constraint firstItem="7Bf-xO-lwa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Sp-9Q-Hju"/>
+                            <constraint firstItem="7Bf-xO-lwa" firstAttribute="leading" secondItem="cd1-Ad-jH2" secondAttribute="leading" id="BAx-Kg-4EG"/>
+                            <constraint firstItem="7Bf-xO-lwa" firstAttribute="trailing" secondItem="cd1-Ad-jH2" secondAttribute="trailing" id="CpB-r7-6f4"/>
+                            <constraint firstItem="kAw-Ic-Jf8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GMk-8S-NPc"/>
+                            <constraint firstItem="cd1-Ad-jH2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="K3q-m9-9KW"/>
+                            <constraint firstItem="7Bf-xO-lwa" firstAttribute="top" secondItem="cd1-Ad-jH2" secondAttribute="bottom" constant="43" id="Qb4-Ob-61L"/>
+                            <constraint firstItem="cd1-Ad-jH2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mjq-WW-c89"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="signalingButton" destination="kAw-Ic-Jf8" id="kii-9b-oRy"/>
+                        <outlet property="signalingStatusLabel" destination="7Bf-xO-lwa" id="fii-is-KIZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
